@@ -36,6 +36,7 @@
     height: 3px;
     border-radius: 1.5px;
     background-color: #0671d6;
+    transition: .4s;
 }
 
 .hamburger>div:before, .hamburger>div:after {
@@ -53,4 +54,34 @@
 
 .hamburger>div:after {
     top: 10px;
+}
+
+.toggler:checked + .hamburger>div {
+    transform: rotate(135deg);
+}
+
+.toggler:checked + .hamburger>div:after, 
+.toggler:checked + .hamburger>div:before, {
+ transform: rotate(90deg);
+ top: 0;   
+}
+
+.menu {
+position: fixed;
+top: 0;
+left: 0;
+/* visibility: hidden; */
+transition: 0.6s;
+}
+
+.menu > div {
+    position: absolute;
+    width: 1600px;
+    height: 1600px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.6s;
 }
