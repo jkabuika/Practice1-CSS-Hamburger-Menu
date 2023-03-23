@@ -67,3 +67,26 @@ body {
 .btn:hover {
     opacity: 0.7;
 }
+
+/* Screen Sizes 500px and Up */
+@media(min-width: 500px) {
+    .menu-container {
+        display: flex;
+        height: 100%;
+    }
+
+    .hamburger {
+        height: 100vh;
+    }
+
+    .menu {
+        height: 100vh;
+    }
+}
+
+/* Screen sizes 700px and up */
+@media(min-width: 700px) {
+    .btn {
+        padding: 1rem 3rem;
+    }
+}
